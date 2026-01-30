@@ -1,0 +1,149 @@
+@use './variables.scss' as *;
+
+// Cores para garantir a fidelidade
+$blue-header: #3442B5;
+$gray-light-text: #9F9F9F;
+
+.header {
+  width: 100%;
+  background: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+
+  // 1. BARRA SUPERIOR (Top Bar)
+  &__top {
+    width: 100%;
+    border-bottom: 1px solid #F0F0F0;
+    padding: 8px 0;
+    background-color: #FFFFFF;
+
+    .header__top-content {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important; // Alinha ao centro
+      
+      width: 100% !important;
+      max-width: 900px !important;       // Largura do frame do Figma
+      margin: 0 auto !important;         // Centraliza o bloco na página
+      gap: 119px !important;              // Espaço entre eles (diminua se quiser mais juntos)
+      
+      height: 32px;
+
+      p {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+        color: $gray-light-text;
+        white-space: nowrap;
+        
+        // MÁGICA DO ALINHAMENTO:
+        // Divide o espaço em 3 colunas iguais para o do meio centralizar perfeitamente
+        flex: 1; 
+
+        &:nth-child(1) { justify-content: flex-start; } // Item 1 na Esquerda
+        &:nth-child(2) { justify-content: center; }    // Item 2 no Centro Real
+        &:nth-child(3) { justify-content: flex-end; }   // Item 3 na Direita
+
+        img {
+          width: 16px;
+          height: auto;
+        }
+
+        span {
+          color: $blue-header;
+          font-weight: 600;
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+
+  // 2. BARRA PRINCIPAL (Logo, Busca e Ícones)
+  &__middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1280px; 
+    margin: 0 auto;
+    padding: 20px;
+
+    .header__logo {
+      width: 139px;
+      cursor: pointer;
+    }
+
+    .header__search {
+      flex: 1;
+      max-width: 716px; 
+      margin: 0 40px;
+      display: flex;
+      align-items: center;
+      background: #F6F5F2;
+      border-radius: 10px;
+      padding-right: 20px;
+
+      input {
+        width: 100%;
+        border: none;
+        background: transparent;
+        padding: 15px 20px;
+        font-size: 14px;
+        outline: none;
+        color: $gray-light-text;
+        &::placeholder { color: $gray-light-text; }
+      }
+      &-icon { cursor: pointer; width: 24px; }
+    }
+
+    .header__icons {
+      display: flex;
+      gap: 30px;
+      img { 
+        cursor: pointer; 
+        width: 24px; 
+        transition: 0.2s; 
+        &:hover { opacity: 0.7; } 
+      }
+    }
+  }
+
+  // 3. MENU INFERIOR (Categorias)
+  &__nav {
+    width: 100%;
+    border-top: 1px solid #F0F0F0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
+
+    .header__nav-list {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      
+      width: 100% !important;
+      max-width: 1141px !important; 
+      gap: 91px !important; 
+      margin: 0 auto !important;
+      padding: 15px 0;
+
+      li {
+        font-size: 12px;
+        font-weight: 600;
+        color: $gray-light-text;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: 0.2s;
+
+        &:hover, &.active { color: #3442B5; } 
+      }
+    }
+
+    &-signature {
+      img { width: 18px; height: auto; }
+    }
+  }
+}

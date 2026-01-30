@@ -1,0 +1,109 @@
+@import './variables.scss';
+
+.footer {
+  width: 100%;
+  background-color: $white;
+
+  // Barra de Newsletter (Roxa)
+  &__newsletter {
+    background-color: #2A1B3D; // Cor roxa escura do print
+    padding: 40px 0;
+    color: $white;
+
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-text {
+      max-width: 450px;
+      h3 { font-size: 24px; font-weight: 700; margin-bottom: 10px; }
+      p { font-size: 14px; opacity: 0.8; }
+    }
+
+    &-form {
+      .form-group {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+
+        input {
+          padding: 12px 20px;
+          border-radius: 4px;
+          border: none;
+          width: 230px;
+          outline: none;
+        }
+
+        button {
+          background-color: $yellow-econverse;
+          color: #2A1B3D;
+          border: none;
+          padding: 0 30px;
+          font-weight: 800;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      }
+
+      .checkbox-label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // Links e Infos
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+  }
+
+  &__info {
+    max-width: 300px;
+    .footer__logo { width: 140px; margin-bottom: 25px; }
+    p { font-size: 14px; color: #3F3F40; margin-bottom: 30px; line-height: 1.5; }
+    
+    .footer__social {
+      display: flex;
+      gap: 25px;
+      img { cursor: pointer; width: 22px; }
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 80px;
+
+    h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #3F3F40;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+    }
+
+    ul li {
+      font-size: 14px;
+      color: #3F3F40;
+      margin-bottom: 15px;
+      cursor: pointer;
+      text-transform: none;
+      &:hover { color: $pink-econverse; }
+    }
+  }
+
+  // Copyright
+  &__bottom {
+    border-top: 1px solid #DEDEDE;
+    padding: 20px 0;
+    text-align: center;
+    p { font-size: 12px; color: #3F3F40; opacity: 0.6; }
+  }
+}

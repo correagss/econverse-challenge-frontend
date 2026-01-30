@@ -1,0 +1,202 @@
+@use './variables.scss' as *;
+
+.shelf {
+  padding: 60px 0;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+
+    .line {
+      flex: 1;
+      height: 1px;
+      background: #DEDEDE;
+    }
+
+    h2 {
+      font-size: 30px;
+      color: $pink-econverse;
+      font-weight: 700;
+    }
+  }
+
+  &__filter {
+    margin-bottom: 40px;
+    ul {
+      display: flex;
+      justify-content: center;
+      border: 1px solid #BDBDBD;
+      li {
+        flex: 1;
+        text-align: center;
+        padding: 12px 0;
+        font-size: 14px;
+        color: #3B3B3B;
+        cursor: pointer;
+        border-right: 1px solid #BDBDBD;
+        text-transform: uppercase;
+        &:last-child { border-right: none; }
+        &:hover, &.active { color: $pink-econverse; font-weight: 700; }
+      }
+    }
+  }
+
+  &__view-all {
+    text-align: center;
+    margin-bottom: 30px;
+    
+    a {
+      font-family: $font-main;
+      font-size: 15px;       
+      font-weight: 700;      
+      color: #3F3F40;        
+      text-decoration: none;
+      text-transform: none;  
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    // Importante: overflow visible para as setas não sumirem ao sair do container
+    overflow: visible; 
+  }
+
+  &__products {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    overflow: hidden; 
+    padding: 25px 5px; // Padding extra para a sombra não ser cortada
+    
+    .product-card {
+      min-width: calc(25% - 15px); 
+      flex-shrink: 0;
+    }
+  }
+
+  // AJUSTE FINAL DAS SETAS (32x32px e mais afastadas)
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 32px !important; 
+    height: 32px !important;
+    
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20; 
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #f9f9f9;
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    // AFASTANDO AS SETAS PARA FORA
+    &--left { 
+      left: -40px; // Aumente para -50px se quiser ainda mais longe
+    } 
+    &--right { 
+      right: -40px; 
+    }
+
+    img {
+      width: 10px; 
+      height: auto;
+      opacity: 0.6;
+    }
+  }
+}
+
+.product-card {
+  padding: 20px;
+  background: $white;
+  
+  // SOMBRA INTENSA DO FIGMA (0.22 de opacidade)
+  box-shadow: 0px 3px 19px 0px rgba(0, 0, 0, 0.22);
+  
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+  border: none;
+  
+  &:hover { 
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  img { 
+    width: 100%; 
+    height: 200px; 
+    object-fit: contain; 
+    margin-bottom: 15px; 
+  }
+
+  &__name {
+    font-size: 15px;
+    font-weight: 300; 
+    color: #3F3F40;
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+
+  &__old-price {
+    font-size: 16px;
+    color: #9F9F9F;
+    text-decoration: line-through;
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #3F3F40;
+    margin: 5px 0;
+  }
+
+  &__installments {
+    font-size: 12px;
+    color: #3F3F40;
+  }
+
+  &__shipping {
+    font-size: 12px;
+    color: $pink-econverse;
+    margin: 10px 0;
+  }
+
+  &__button {
+    background: $pink-econverse;
+    color: $white;
+    border: none;
+    padding: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: auto;
+    
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+}

@@ -1,31 +1,52 @@
-# Teste Econverse: Vaga Desenvolvedor Front-End
+# 🚀 Econverse frontend challenge
 
-### Vem ser #Econverse!
+Este projeto foi desenvolvido como parte do desafio técnico para a vaga de **Desenvolvedor Front-End na Econverse**. O objetivo foi criar uma landing page de e-commerce funcional, responsiva e fiel ao layout do Figma (Pixel Perfect).
 
-Segue abaixo as instruções para a execução do teste.
+## 🛠️ Tecnologias Utilizadas
 
-## Instruções
-- Faça um fork desse projeto para a sua conta pessoal do GitHub.
-- Desenvolva a página conforme as **Especificações Técnicas** 
-- Crie um README com as instruções para compilar, testar e rodar o projeto.
-- O link do repositório deverá ser enviado para o e-mail ana.nascimento@econverse.com.br com o título **Teste Vaga FrontEnd**
+- **React**: Biblioteca principal para construção da interface.
+- **TypeScript**: Utilizado para garantir a tipagem estática e segurança do código.
+- **Sass (SCSS)**: Pré-processador utilizado para estilização modularizada, utilizando a metodologia BEM e a nova sintaxe `@use`.
+- **Vite**: Ferramenta de build para um ambiente de desenvolvimento rápido.
+- **Fetch API**: Para consumo dos dados dinâmicos do JSON.
 
-## Especificações Técnicas
-- Desenvolver a pagina em React e TypeScript conforme o [layout](https://www.figma.com/file/rWnzPeoxgynuNPsJjV0VmV/Teste-Front-End-Jr?node-id=0%3A1). Para conseguir pegar os elementos do Figma, basta copiar o layout para sua conta que terá acesso de edição.
-- Montar a [vitrine](https://app.econverse.com.br/teste-front-end/junior/tecnologia/layout/vitrine-produtos.png) de produtos consumindo as informações dos produtos em json atraves desse [Link](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json).
-- Desenvolver a interação ao clicar em um produto conforme layout. A interação consiste em abrir um modal com as principais informações do produto presente no arquivo [JSON](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json) conforme o produto que clicar.
-- Utilizar Pré-processador Sass, Less ou Stylus.
-- Respeitar o Layout pixel a pixel, tamanho das fontes, cores e botões.
-- Não Utilizar bibliotecas UI como Bootstrap, Foundation, ou afins.
+## 📦 Funcionalidades
 
-## Pontos Extras
-- Utilizar Boas práticas de SEO
-- Uso de HTML semântico
+- **Vitrine Dinâmica**: Listagem de produtos consumindo um arquivo JSON, com tratamento de preços e parcelamentos.
+- **Modal de Visualização Rápida**: Interação ao clicar em um produto, abrindo um modal com detalhes específicos do item selecionado (nome, preço, descrição).
+- **Pixel Perfect**: Ajuste rigoroso de cores (Rosa institucional, Azul de destaque e Amarelo CTA), tipografia (Poppins), gaps e sombras conforme as especificações do Figma.
+- **Componentização**: Organização do código em componentes reutilizáveis e independentes (Header, Banner, Shelf, Modal, Brands, Footer).
 
-## O que avaliaremos em seu teste
-- Organização do projeto
-- Lógica do código
-- Componentização
-- Alcance dos objetivos propostos
+## 🔧 Como rodar o projeto
 
-**Boa sorte! ;)**
+Siga os passos abaixo para compilar e rodar o projeto em sua máquina local:
+
+1. **Clonar o repositório:**
+   ```bash
+   git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
+
+1- **Entrar na pasta do projeto:**
+
+   cd seu-projeto-econverse
+
+2- **Instalar as dependências:**
+    
+    npm install
+
+3- **Rodar o ambiente de desenvolvimento:**
+   
+   npm run dev
+
+4- **Acessar o projeto:**
+
+Abra o seu navegador e acesse: http://localhost:5173
+
+## 📝 Decisões Técnicas e Notas
+
+CORS & JSON Local: Devido a bloqueios de segurança (CORS) na URL original da API em ambiente local, optei por hospedar os dados na pasta /public/products.json. Isso garante que os avaliadores consigam visualizar os dados reais da vitrine sem erros de carregamento.
+
+Sass Architecture: Os estilos foram divididos em módulos (arquivos separados por componente) e centralizados através de um arquivo de variáveis globais, facilitando a manutenção e consistência visual.
+HTML Semântico: Uso rigoroso de tags semânticas (header, main, section, nav, footer) visando melhores práticas de SEO e acessibilidade.
+
+
+Desenvolvido por Gabriel Corrêa.

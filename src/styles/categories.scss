@@ -1,0 +1,50 @@
+@import './variables.scss';
+
+.categories {
+  padding: 40px 0;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    .categories__icon-box {
+      width: 128px;
+      height: 128px;
+      background: $white;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      img {
+        width: 60px; // Ajuste conforme o Figma
+        height: auto;
+      }
+    }
+
+    span {
+      font-size: 16px;
+      font-weight: 500;
+      color: #4E4E4E;
+    }
+
+    // Estilo para a categoria ativa (Tecnologia) ou Hover
+    &.active, &:hover {
+      span {
+        color: $pink-econverse;
+        font-weight: 700;
+      }
+    }
+  }
+}

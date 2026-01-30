@@ -1,0 +1,30 @@
+// src/styles/global.scss
+@import './variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+  -webkit-font-smoothing: antialiased;
+  color: $gray-text;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1280px; // Verifique a largura total no Figma
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
