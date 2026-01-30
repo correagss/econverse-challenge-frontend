@@ -16,7 +16,7 @@ const ProductModal: React.FC<ModalProps> = ({ product, onClose }) => {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose}>
-          {/* Pode usar um ícone X do Figma aqui */}
+          
           ✕
         </button>
         

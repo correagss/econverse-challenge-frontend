@@ -36,25 +36,25 @@
     }
 
     h2 {
-      font-size: 32px;          // Valor que você pediu agora
+      font-size: 32px;          
       font-weight: 700;
       color: $white;
       margin-bottom: 35px;
 
       span {
-        color: #F7CA11;         // O amarelo exato (#F7CA11) do seu print
+        color: #F7CA11;         
       }
     }
 
     .banner__button {
-      // Medidas exatas do seu print (Fixed)
+      
       width: 206px;             
       height: 50px;
       
-      background-color: #F7CA11; // Amarelo do Figma
-      color: #271C47;           // Roxo para contraste
+      background-color: #F7CA11; 
+      color: #271C47;           
       border: none;
-      border-radius: 5px;       // Radius do Figma
+      border-radius: 5px;       
       
       font-size: 18px;
       font-weight: 700;

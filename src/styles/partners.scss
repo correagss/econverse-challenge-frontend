@@ -9,7 +9,7 @@
   &__item {
     flex: 1; // Faz com que ambos tenham o mesmo tamanho
     height: 350px; // Altura conforme o Figma
-    background-image: url('../assets/partner-bg.png'); // Imagem que você exportou "limpa"
+    background-image: url('../assets/partner-bg.png'); 
     background-size: cover;
     background-position: center;
     border-radius: 20px; // Cantos arredondados do layout
@@ -55,8 +55,8 @@
     }
 
     button {
-      background-color: #F7CA11; // Amarelo do Figma
-      color: #271C47; // Roxo escuro para o texto
+      background-color: #F7CA11; 
+      color: #271C47; 
       border: none;
       padding: 12px 40px;
       font-size: 14px;

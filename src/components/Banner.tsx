@@ -4,7 +4,7 @@ const Banner: React.FC = () => {
   return (
     <section className="banner">
   <div className="banner__overlay">
-    {/* O container deve estar aqui dentro */}
+
     <div className="container"> 
       <div className="banner__content">
         <h1>Venha conhecer nossas promoções</h1>

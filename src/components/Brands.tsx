@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo.svg'; // Reutilizando a logo que você já tem
+import logo from '../assets/logo.svg'; // Reutilizando a logo
 
 const brandsData = [1, 2, 3, 4, 5]; // Array para gerar os 5 círculos
 

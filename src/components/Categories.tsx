@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Importando os ícones (ajuste os nomes conforme você salvou)
+// Importando os ícones
 import techIcon from '../assets/cat-tech.svg';
 import superIcon from '../assets/cat-super.svg';
 import drinksIcon from '../assets/cat-drinks.svg';

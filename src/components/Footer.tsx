@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo.svg'; // Use a mesma logo do header
+import logo from '../assets/logo.svg'; // A mesma logo do header
 import iconInsta from '../assets/instagram.svg';
 import iconFace from '../assets/facebook.svg';
 import iconLinkedin from '../assets/linkedin.svg';

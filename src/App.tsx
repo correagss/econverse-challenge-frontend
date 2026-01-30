@@ -13,7 +13,7 @@ import Banner from './components/Banner';
 import Categories from './components/Categories';
 import ProductShelf from './components/ProductShelf';
 import PartnerBanners from './components/PartnerBanners';
-import Brands from './components/Brands'; // 1. Importando o novo componente de Marcas
+import Brands from './components/Brands'; 
 import Footer from './components/Footer';
 
 function App() {

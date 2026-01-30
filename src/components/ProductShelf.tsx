@@ -5,7 +5,7 @@ import ProductModal from './ProductModal';
 import arrowLeft from '../assets/arrow-left.svg';
 import arrowRight from '../assets/arrow-right.svg';
 
-// 1. Definimos o "contrato" de propriedades do componente
+// 1. O "contrato" de propriedades do componente
 interface ShelfProps {
   showFilter?: boolean;
 }
@@ -14,7 +14,7 @@ const shelfCategories = [
   "CELULAR", "ACESSÓRIOS", "TABLETS", "NOTEBOOKS", "TVS", "VER TODOS"
 ];
 
-// 2. Recebemos o showFilter. Se não for enviado, ele assume 'true'
+// 2. Recebe o showFilter. Se não for enviado, ele assume 'true'
 const ProductShelf: React.FC<ShelfProps> = ({ showFilter = true }) => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
@@ -51,9 +51,7 @@ const ProductShelf: React.FC<ShelfProps> = ({ showFilter = true }) => {
         <div className="line"></div>
       </div>
 
-      {/* 3. LÓGICA CONDICIONAL: 
-          Se showFilter for true: mostra o menu de abas.
-          Se showFilter for false: mostra apenas o link "Ver todos". */}
+      
       {showFilter ? (
         <nav className="shelf__filter">
           <ul>
