@@ -23,7 +23,7 @@ Siga os passos abaixo para compilar e rodar o projeto em sua máquina local:
 
 1. **Clonar o repositório:**
    ```bash
-   git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
+   git clone https://github.com/correagss/econverse-challenge-frontend.git
 
 1- **Entrar na pasta do projeto:**
 
