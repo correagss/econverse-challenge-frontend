@@ -27,7 +27,7 @@ Siga os passos abaixo para compilar e rodar o projeto em sua máquina local:
 
 1- **Entrar na pasta do projeto:**
 
-   cd seu-projeto-econverse
+   cd teste-vaga-frontend
 
 2- **Instalar as dependências:**
     
