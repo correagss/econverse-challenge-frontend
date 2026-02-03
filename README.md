@@ -43,7 +43,7 @@ Abra o seu navegador e acesse: http://localhost:5173
 
 ## 📝 Decisões Técnicas e Notas
 
-CORS & JSON Local: Devido a bloqueios de segurança (CORS) na URL original da API em ambiente local, optei por hospedar os dados na pasta /public/products.json. Isso garante que os avaliadores consigam visualizar os dados reais da vitrine sem erros de carregamento.
+CORS & JSON Local: Devido a bloqueios de segurança (CORS) na URL original da API em ambiente local, optei por hospedar os dados na pasta /public/products.json.
 
 Sass Architecture: Os estilos foram divididos em módulos (arquivos separados por componente) e centralizados através de um arquivo de variáveis globais, facilitando a manutenção e consistência visual.
 HTML Semântico: Uso rigoroso de tags semânticas (header, main, section, nav, footer) visando melhores práticas de SEO e acessibilidade.
